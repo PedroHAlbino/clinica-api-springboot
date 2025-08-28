@@ -20,10 +20,13 @@ public class Paciente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "nome", length = 120)
     private String nome;
 
+    @Column(name = "data_nascimento")
     private Date dataNascimento;
 
+    @Column(name = "telefone", length = 15)
     private String telefone;
 
     @OneToMany(fetch = FetchType.EAGER)
