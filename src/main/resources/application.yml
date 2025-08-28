@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: optional:file:.env.properties
+  application:
+    name: clinica-api-springboot
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  flyway:
+    enabled: false
